@@ -94,7 +94,14 @@ function getPasswordLength() {
     comboArray = comboArray.concat(NumberCase)
   }
 
-  
+  for (let i = 0; i <passwordLength; i++) {
+    let randomLetter = comboArray[randomNumber]
+    let randomNumber = Math.floor(Math.random() * comboArray.length)
+    password += randomLetter;
+  }
+
+
+  return password;
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
