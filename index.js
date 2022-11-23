@@ -22,7 +22,7 @@ function writePassword() {
 
 function getPasswordLength() {
     let amountCharacters = window.prompt("Please enter a password between 8-128 characters");
-    
+
     if (amountCharacters > 128 || amountCharacters < 8) {
       window.alert("Password must be between 8-128 characters");
 
@@ -31,6 +31,16 @@ function getPasswordLength() {
     }
     return Number.parseInt(amountCharacters);
   
+  }
+
+  function getUpperCase() {
+    let upperChoice = window.confirm("Do you want your password to contain uppercase letters?");
+
+    if (upperChoice) {
+      return upperChoice
+    }
+    
+    return null;
   }
 
 // Add event listener to generate button
