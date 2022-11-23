@@ -21,7 +21,7 @@ function writePassword() {
 }
 
 function getPasswordLength() {
-    let amountCharacters = window.prompt("Please enter a password between 8-128 characters");
+    let amountCharacters = window.prompt("Enter a password between 8-128 characters");
 
     if (amountCharacters > 128 || amountCharacters < 8) {
       window.alert("Password must be between 8-128 characters");
@@ -34,7 +34,7 @@ function getPasswordLength() {
   }
 
   function getUpperCase() {
-    let upperChoice = window.confirm("Do you want your password to have uppercase letters?");
+    let upperChoice = window.confirm("Do you want your password to have upper case letters?");
 
     if (upperChoice) {
       return upperChoice
@@ -44,7 +44,7 @@ function getPasswordLength() {
   }
 
   function getLowerCase() {
-    let lowerChoice = window.confirm("Do you want your password to have lowercase letters?")
+    let lowerChoice = window.confirm("Do you want your password to have lower case letters?")
     if (lowerChoice) {
       return lowerChoice
     }
@@ -76,22 +76,22 @@ function getPasswordLength() {
     let hasLowerCase = getLowerCase();
     let hasSpecialCase = getSpecialCase();
     let hasNumCase = getNumCase();
-  }
+  
 
   if (hasUpperCase) {
     comboArray = comboArray.concat(UpperCase)
   }
 
   if (hasLowerCase) {
-    comboArray = comboArray.concat(LowerCase)
+    comboArray = comboArray.concat(lowerCase)
   }
 
   if (hasSpecialCase) {
-    comboArray = comboArray.concat(SpecialCase)
+    comboArray = comboArray.concat(specialCase)
   }
 
   if (hasNumberCase) {
-    comboArray = comboArray.concat(NumberCase)
+    comboArray = comboArray.concat(numberCase)
   }
 
   for (let i = 0; i <passwordLength; i++) {
@@ -101,7 +101,13 @@ function getPasswordLength() {
   }
 
 
-  return password;
+  
+    return password;
+
+}
+
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
