@@ -34,14 +34,67 @@ function getPasswordLength() {
   }
 
   function getUpperCase() {
-    let upperChoice = window.confirm("Do you want your password to contain uppercase letters?");
+    let upperChoice = window.confirm("Do you want your password to have uppercase letters?");
 
     if (upperChoice) {
       return upperChoice
     }
-    
+
     return null;
   }
+
+  function getLowerCase() {
+    let lowerChoice = window.confirm("Do you want your password to have lowercase letters?")
+    if (lowerChoice) {
+      return lowerChoice
+    }
+    return null;
+  }
+
+  function getSpecialCase() {
+    let specialChoice = window.confirm("Do you want your password to have special characters?");
+
+    if (specialChoice) {
+      return specialChoice
+    }
+    return null;
+  }
+
+  function getNumCase() {
+    let numChoice = window.confirm("Do you want your password to have numbers?");
+    if (numChoice) {
+      return numChoice
+    }
+    return null;
+  }
+
+  function generatePassword() {
+
+    let password = "";
+    let passwordLength = getPasswordLength();
+    let hasUpperCase = getUpperCase();
+    let hasLowerCase = getLowerCase();
+    let hasSpecialCase = getSpecialCase();
+    let hasNumCase = getNumCase();
+  }
+
+  if (hasUpperCase) {
+    comboArray = comboArray.concat(UpperCase)
+  }
+
+  if (hasLowerCase) {
+    comboArray = comboArray.concat(LowerCase)
+  }
+
+  if (hasSpecialCase) {
+    comboArray = comboArray.concat(SpecialCase)
+  }
+
+  if (hasNumberCase) {
+    comboArray = comboArray.concat(NumberCase)
+  }
+
+  
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
