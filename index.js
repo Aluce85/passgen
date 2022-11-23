@@ -20,5 +20,18 @@ function writePassword() {
 
 }
 
+function getPasswordLength() {
+    let amountCharacters = window.prompt("Please enter a password between 8-128 characters");
+    
+    if (amountCharacters > 128 || amountCharacters < 8) {
+      window.alert("Password must be between 8-128 characters");
+
+
+      return getPasswordLength()
+    }
+    return Number.parseInt(amountCharacters);
+  
+  }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
